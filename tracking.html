@@ -37,6 +37,8 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/timeline.css" rel="stylesheet" />
+    
 
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -58,7 +60,7 @@
 
     <!-- Navbar Start -->
     <nav
-      class="navbar navbar-expand-lg bg-white navbar-light shadow border-primary sticky-top p-0 dm-sans"
+      class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0 dm-sans"
       style="top: 0 !important"
     >
       <a
@@ -86,87 +88,110 @@
     </nav>
     <!-- Navbar End -->
 
-    <!-- Contact Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-            <p><span class="text-primary me-2">#</span>Contact Us</p>
-            <h1 class="display-5 mb-4">Have Any Query? Please Contact Us!</h1>
-            <p class="mb-4">
-              Please give us a call, drop us an email or fill out the contact
-              form and we’ll get back to you.
-            </p>
-            <form>
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <div class="form-floating">
-                    <input
-                      type="text"
-                      class="form-control bg-light border-0"
-                      id="name"
-                      placeholder="Your Name"
-                    />
-                    <label for="name">Your Name</label>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-floating">
-                    <input
-                      type="email"
-                      class="form-control bg-light border-0"
-                      id="email"
-                      placeholder="Your Email"
-                    />
-                    <label for="email">Your Email</label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-floating">
-                    <input
-                      type="text"
-                      class="form-control bg-light border-0"
-                      id="subject"
-                      placeholder="Subject"
-                    />
-                    <label for="subject">Subject</label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-floating">
-                    <textarea
-                      class="form-control bg-light border-0"
-                      placeholder="Leave a message here"
-                      id="message"
-                      style="height: 100px"
-                    ></textarea>
-                    <label for="message">Message</label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <button class="btn btn-primary w-100 py-3" type="submit">
-                    Send Message
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="h-100" style="min-height: 400px">
-              <iframe
-                class="rounded w-100 h-100"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126845.96932300951!2d3.2811264060500416!3d6.529699313825884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9228fa2a3999%3A0xd7a8324bddbba1f0!2sIkeja%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2sbd!4v1714895474040!5m2!1sen!2sbd"
-                frameborder="0"
-                allowfullscreen=""
-                aria-hidden="false"
-                tabindex="0"
-              ></iframe>
-            </div>
-          </div>
-        </div>
+     <!-- Shipment details starts -->
+     <div class="shipment-details">
+      <h2>Shipment Details</h2>
+      <table>
+          <thead>
+              <tr>
+                  <th class="tracking-number">Tracking Number</th>
+                  <th class="shipper-name">Name of Shipper</th>
+                  <th class="weight">Weight (KG)</th>
+                  <th class="length">Length (CM)</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td class="tracking-number">64783922</td>
+                  <td class="shipper-name">Anthony Benjamin Williams</td>
+                  <td class="weight">8500</td>
+                  <td class="length">4700</td>
+              </tr>
+          </tbody>
+      </table>
+      <table>
+          <thead>
+              <tr>
+                  <th class="receiver-name">Receiver's Name</th>
+                  <th class="product">Product</th>
+                  <th class="height">Height (CM)</th>
+                  <th class="width">Width (CM)</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td class="receiver-name">Aud Irene Nielsen</td>
+                  <td class="product">Family Inheritance</td>
+                  <td class="height">5000</td>
+                  <td class="width">4500</td>
+              </tr>
+          </tbody>
+      </table>
+      <div class="departure-info">
+          <p>Departure Time: 6 a.m.</p>
+          <p>Departure Date: April 26, 2024</p>
       </div>
+      <table>
+          <thead>
+              <tr>
+                  <th class="origin">Origin</th>
+                  <th class="destination">Destination</th>
+                  <th class="pickup-date">Pickup Date</th>
+                  <th class="status">Status</th>
+                  <th class="speed">Speed</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td class="origin">Landstads gate 27, 3210 Sandefjord, Norway</td>
+                  <td class="destination">--</td>
+                  <td class="pickup-date">May 2, 2024</td>
+                  <td class="status">AWAITING PAYMENT</td>
+                  <td class="speed">--</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  <!-- Shipment details ends -->
+
+    <!-- Timeline start -->
+    <div>
+        <div class="container">
+            <div class="timeline">
+                <div class="timeline-container primary">
+                    <div class="timeline-icon success">
+                        <i class="bi bi-truck"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">Shipment Dispatched</span></h4>
+                        <p>Your package has been dispatched from the warehouse and is on its way to the destination sorting center.</p>
+                        <p class="timeline-subtitle">1 Hour Ago</p>
+                    </div>
+                </div>
+                <div class="timeline-container danger">
+                    <div class="timeline-icon danger">
+                        <i class="far fa-times-circle"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">Delivery Attempt Failed</span></h4>
+                        <p>There was an unsuccessful delivery attempt due to recipient unavailable. Please reschedule delivery.</p>
+                        <p class="timeline-subtitle">2 Hours Ago</p>
+                    </div>
+                </div>
+                <div class="timeline-container warning">
+                    <div class="timeline-icon warning">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">Delayed Delivery</span></h4>
+                        <p>Due to unforeseen circumstances, there is a delay in the delivery schedule. We apologize for the inconvenience.</p>
+                        <p class="timeline-subtitle">1 Day Ago</p>
+                    </div>
+                </div>
+            </div>
     </div>
-    <!-- Contact End -->
+    <!-- Timekine ends -->
+
 
     <!-- Footer Start -->
     <div
