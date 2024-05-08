@@ -41,6 +41,10 @@
     
 
     <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- leaflet js -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   </head>
   <body>
     <!-- Spinner Start -->
@@ -192,6 +196,19 @@
     </div>
     <!-- Timekine ends -->
 
+    <div class="container map-wrapper">
+      <div class="column">
+        <div class="row-cols-md-auto" style='margin: auto;'>
+          <h3>Lorem ipsum dolor sit amet</h3>
+        </div>
+    
+        <div class="row-cols-md-auto" style='margin: auto;'>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+
+
 
     <!-- Footer Start -->
     <div
@@ -294,5 +311,20 @@
     <script src="./lib/owlcarousel/owl.carousel.min.js"></script>
 
     <script src="/js/script.js"></script>
+    <script>
+      // Initialize the map
+      var map = L.map('map').setView([6.5244, 3.3792], 10); // Coordinates for Lagos State
+    
+      // Add the base tile layer (OpenStreetMap)
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+    
+      // Add a marker for Lagos State
+      L.marker([6.5244, 3.3792]).addTo(map)
+        .bindPopup('Lagos State')
+        .openPopup();
+    </script>
+    
   </body>
 </html>
